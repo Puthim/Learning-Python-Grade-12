@@ -1,24 +1,40 @@
 todo = []
 
 def printer():
-    print(todo)
+    for i in todo:
+        print(i)
 
-def add(name):
-    todo.append(name)
+def add(x):
+    todo.append(x)
 
 def dis():
-    ind = input('please write your list: ')
-    return ind
+    x = input('Add: ')
+    return x
 
 def dis2():
-    ind = input('please remove your list: ')
-    return ind
-def remove(name):
-    todo.remove(name)
+    x = input('Remove: ')
+    return x
+
+def remove(x):
+    todo.remove(x)
+
+def line():
+    print("-"*26)
+
+def instructions():
+    print('"q" => Quit the program.')
+    print('"1" => Add to list.')
+    print('"2" => Remove from list.')
+    print('"3" => To view list.')
 
 #use int(input()) to make input an integer
+line()
+instructions()
+
 while True:
-    command = input("Use 1 to add to list, 2 to remove from list, 3 to view all lists, and \"q\" to exit the program: ")
+    line()
+    command = input("Plesae input a command: ")
+    line()
     if command == "1":
         add(dis())
         continue
@@ -29,7 +45,13 @@ while True:
         printer()
         continue
     elif command == "q":
-        print("goodbye")
+        print("Goodbye :)")
         break
     else: 
-        print("you wrote the wrong command")
+        print("You wrote the wrong command!!!")
+        line()
+        print("Please instead use:")
+        line()
+        instructions()
+#CRUD creat remove update and 
+#use print("2"*20) to print 20 line of 2
